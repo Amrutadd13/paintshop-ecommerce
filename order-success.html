@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed | Sri Venkateshwara Sanitary</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">🏪</span>
+
+            <div>
+                <h2>Sri Venkateshwara</h2>
+                <p>Sanitary & Paints</p>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- SUCCESS SECTION -->
+    <main class="success-page">
+
+        <div class="success-card">
+
+            <!-- SUCCESS ICON -->
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <span class="success-label">
+                ORDER CONFIRMED
+            </span>
+
+
+            <h1>
+                Thank You For<br>
+                <strong>Your Order!</strong>
+            </h1>
+
+
+            <p class="success-message">
+                Your order has been successfully placed with
+                Sri Venkateshwara Sanitary.
+            </p>
+
+
+            <!-- ORDER DETAILS -->
+            <div class="order-details">
+
+                <div class="detail-row">
+
+                    <span>
+                        Order Status
+                    </span>
+
+                    <strong class="status">
+                        ✓ Confirmed
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Customer
+                    </span>
+
+                    <strong id="customer-name">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Payment
+                    </span>
+
+                    <strong>
+                        Cash on Delivery
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <strong
+                        class="order-total"
+                        id="order-total">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY ADDRESS -->
+            <div class="delivery-box">
+
+                <div class="delivery-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <span>
+                        DELIVERY ADDRESS
+                    </span>
+
+                    <p id="delivery-address">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="success-buttons">
+
+                <a
+                    href="products.html"
+                    class="success-primary">
+
+                    Continue Shopping →
+
+                </a>
+
+
+                <a
+                    href="index.html"
+                    class="success-secondary">
+
+                    Back to Home
+
+                </a>
+
+            </div>
+
+
+            <p class="thank-note">
+                Thank you for choosing
+                <strong>Sri Venkateshwara Sanitary</strong>.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div>
+
+            <h2>
+                Sri Venkateshwara Sanitary
+            </h2>
+
+            <p>
+                Paints • Sanitary • Hardware
+            </p>
+
+            <p>
+                Quality products for your home.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Visit Us
+            </h3>
+
+            <p>
+                W-123, Anna Nagar
+            </p>
+
+            <p>
+                Chennai, Tamil Nadu
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📞 +91 XXXXXXXXXX
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- LOAD ORDER DETAILS -->
+    <script>
+
+        const lastOrder =
+            JSON.parse(
+                localStorage.getItem("lastOrder")
+            );
+
+        if (lastOrder) {
+
+            // Customer name
+            document.getElementById(
+                "customer-name"
+            ).textContent =
+                lastOrder.customer.name;
+
+
+            // Calculate total
+            let total = 0;
+
+            lastOrder.products.forEach(item => {
+
+                total +=
+                    item.price * item.quantity;
+
+            });
+
+
+            document.getElementById(
+                "order-total"
+            ).textContent =
+                "₹" + total.toLocaleString("en-IN");
+
+
+            // Delivery address
+            document.getElementById(
+                "delivery-address"
+            ).innerHTML = `
+
+                ${lastOrder.customer.address}<br>
+                ${lastOrder.customer.city}
+                - ${lastOrder.customer.pincode}
+
+            `;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

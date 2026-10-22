@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | Sri Venkateshwara Sanitary</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🏪</span>
+
+            <div>
+                <h2>Sri Venkateshwara</h2>
+                <p>Sanitary & Paints</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Products</a>
+
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE HERO -->
+
+    <section class="products-hero">
+
+        <div>
+
+            <span class="small-heading">
+                QUALITY PRODUCTS • TRUSTED SERVICE
+            </span>
+
+            <h1>
+                Everything Your<br>
+                <span>Home Needs</span>
+            </h1>
+
+            <p>
+                Explore our collection of paints, sanitary products,
+                plumbing essentials and painting tools.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <section class="category-section">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-buttons">
+
+            <button onclick="filterProducts('all')">
+                All Products
+            </button>
+
+            <button onclick="filterProducts('Paints')">
+                🎨 Paints
+            </button>
+
+            <button onclick="filterProducts('Sanitary')">
+                🚿 Sanitary
+            </button>
+
+            <button onclick="filterProducts('Hardware')">
+                🔧 Hardware
+            </button>
+
+            <button onclick="filterProducts('Painting Tools')">
+                🖌️ Painting Tools
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <main class="products-container">
+
+        <div class="products-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card" data-category="Paints">
+
+                <div class="product-image paint-bg">
+                    🎨
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Paints
+                    </span>
+
+                    <h3>Interior Emulsion Paint</h3>
+
+                    <p>
+                        Smooth and durable paint for beautiful
+                        interior walls.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹2,500</strong>
+
+                        <button onclick="addToCart(1)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card" data-category="Paints">
+
+                <div class="product-image exterior-bg">
+                    🏠
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Paints
+                    </span>
+
+                    <h3>Exterior Wall Paint</h3>
+
+                    <p>
+                        Weather-resistant protection for
+                        exterior walls.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹3,500</strong>
+
+                        <button onclick="addToCart(2)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card" data-category="Paints">
+
+                <div class="product-image primer-bg">
+                    🧱
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Paints
+                    </span>
+
+                    <h3>Wall Primer</h3>
+
+                    <p>
+                        Provides a strong and smooth base
+                        before painting.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹1,200</strong>
+
+                        <button onclick="addToCart(3)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card" data-category="Paints">
+
+                <div class="product-image enamel-bg">
+                    🪣
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Paints
+                    </span>
+
+                    <h3>Enamel Paint</h3>
+
+                    <p>
+                        Long-lasting finish for wood and
+                        metal surfaces.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹1,800</strong>
+
+                        <button onclick="addToCart(4)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card" data-category="Sanitary">
+
+                <div class="product-image sanitary-bg">
+                    🚿
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Sanitary
+                    </span>
+
+                    <h3>Bathroom Tap</h3>
+
+                    <p>
+                        Stylish and reliable tap for
+                        modern bathrooms.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹850</strong>
+
+                        <button onclick="addToCart(5)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card" data-category="Sanitary">
+
+                <div class="product-image mixer-bg">
+                    💧
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Sanitary
+                    </span>
+
+                    <h3>Basin Mixer</h3>
+
+                    <p>
+                        Premium mixer tap designed for
+                        everyday use.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹1,450</strong>
+
+                        <button onclick="addToCart(6)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+
+            <div class="product-card" data-category="Sanitary">
+
+                <div class="product-image shower-bg">
+                    🚿
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Sanitary
+                    </span>
+
+                    <h3>Shower Set</h3>
+
+                    <p>
+                        Complete shower solution for
+                        your bathroom.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹1,200</strong>
+
+                        <button onclick="addToCart(7)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="product-card" data-category="Sanitary">
+
+                <div class="product-image basin-bg">
+                    🛁
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Sanitary
+                    </span>
+
+                    <h3>Wash Basin</h3>
+
+                    <p>
+                        Elegant and durable wash basin
+                        for modern homes.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹2,200</strong>
+
+                        <button onclick="addToCart(8)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 9 -->
+
+            <div class="product-card" data-category="Hardware">
+
+                <div class="product-image pipe-bg">
+                    🔧
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Hardware
+                    </span>
+
+                    <h3>PVC Pipe</h3>
+
+                    <p>
+                        Durable plumbing pipe suitable
+                        for home applications.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹450</strong>
+
+                        <button onclick="addToCart(9)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 10 -->
+
+            <div class="product-card" data-category="Painting Tools">
+
+                <div class="product-image roller-bg">
+                    🖌️
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Painting Tools
+                    </span>
+
+                    <h3>Paint Roller Set</h3>
+
+                    <p>
+                        Easy-to-use roller set for smooth
+                        and even painting.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>₹350</strong>
+
+                        <button onclick="addToCart(10)">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div>
+
+            <h2>Sri Venkateshwara Sanitary</h2>
+
+            <p>
+                Quality paints, sanitary products and
+                hardware for your home.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Visit Us</h3>
+
+            <p>
+                W-123, Anna Nagar,<br>
+                Chennai, Tamil Nadu
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>
+                📞 +91 XXXXXXXXXX
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/products.js"></script>
+
+
+    <!-- CATEGORY FILTER SCRIPT -->
+
+    <script>
+
+        function filterProducts(category) {
+
+            const cards =
+                document.querySelectorAll(".product-card");
+
+            cards.forEach(card => {
+
+                if (
+                    category === "all" ||
+                    card.dataset.category === category
+                ) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
